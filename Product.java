@@ -1,10 +1,11 @@
+
 public class Product {
     public String name;
     public Double price;
-    public Number quantity;
+    public int quantity;
 
 
-    public Product(String name, Double price, Number quantity) {
+    public Product(String name, Double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -18,7 +19,7 @@ public class Product {
         return price;
     }
 
-    public Number getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
@@ -30,7 +31,11 @@ public class Product {
         this.price = price;
     }
 
-    public void setQuantity(Number quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public Product clone(int quantity) {
+        return new Product(name, price, quantity);
     }
 }
