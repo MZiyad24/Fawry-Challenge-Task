@@ -69,7 +69,7 @@ public class Market {
     }
     public void checkout(Customer customer, Cart cart)
     {
-        if(cart.isEmpty()) throw new Error("Components.Cart.Cart is Empty!");
+        if(cart.isEmpty())  throw new IllegalStateException("Cart is Empty!");
         List<Product> items = cart.getItems();
 
         ShippingService service = new ShippingService();
@@ -77,9 +77,8 @@ public class Market {
         Double total = shipFees + cart.getTotalCart();
 
         if(customer.getBalance() < total) {
-            System.out.println("insufficient balance!\nneeded:"
+            throw new IllegalStateException("insufficient balance!\nneeded:"
                     + total + " found: " + customer.getBalance());
-            System.exit(0);
         }
 
         service.getShipmentStatement(items);

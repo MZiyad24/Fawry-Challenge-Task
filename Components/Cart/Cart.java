@@ -30,8 +30,7 @@ public class Cart {
             if(product1 instanceof Expireable)
             {
                 if (((Expireable) product1).getExpirityDate().isBefore(LocalDate.now())) {
-                    System.out.println("This item: " + product1.getName() + " is Expired!");
-                    System.exit(0);
+                    throw new IllegalStateException("This item: " + product1.getName() + " is Expired!");
                 }
 
             }
@@ -40,8 +39,7 @@ public class Cart {
             market.removeFromStock(product,quantity);
         }
         else {
-            System.out.println(product + " quantity isn't available in stock!.");
-            System.exit(0);
+            throw new IllegalStateException(product + " quantity isn't available in stock!.");
         }
     }
 
