@@ -1,4 +1,12 @@
-import java.time.LocalDate;
+package Components.Market;
+
+import Components.Cart.Cart;
+import Components.Interface.Expireable;
+import Components.Interface.Shipabble;
+import Components.Product.Product;
+import Components.Customer.Customer;
+import Components.ShippingService.ShippingService;
+
 import java.util.*;
 
 public class Market {
@@ -61,7 +69,7 @@ public class Market {
     }
     public void checkout(Customer customer, Cart cart)
     {
-        if(cart.isEmpty()) throw new Error("Cart is Empty!");
+        if(cart.isEmpty()) throw new Error("Components.Cart.Cart is Empty!");
         List<Product> items = cart.getItems();
 
         ShippingService service = new ShippingService();

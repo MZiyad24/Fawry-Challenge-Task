@@ -1,3 +1,5 @@
+package Components.Customer;
+
 public class Customer {
     public String name;
     public Double balance;

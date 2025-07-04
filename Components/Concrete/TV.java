@@ -1,4 +1,9 @@
-public class TV extends Product implements Shipabble{
+package Components.Concrete;
+
+import Components.Interface.Shipabble;
+import Components.Product.Product;
+
+public class TV extends Product implements Shipabble {
     public Double weight;
     public TV(String name, Double price, int quantity, Double weight) {
         super(name, price, quantity);

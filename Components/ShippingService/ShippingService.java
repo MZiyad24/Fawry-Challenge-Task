@@ -1,3 +1,8 @@
+package Components.ShippingService;
+
+import Components.Interface.Shipabble;
+import Components.Product.Product;
+
 import java.util.List;
 
 public class ShippingService {

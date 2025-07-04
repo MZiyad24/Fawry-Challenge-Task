@@ -1,7 +1,10 @@
+package Components.Concrete;
+import Components.Interface.Expireable;
+import Components.Interface.Shipabble;
+import Components.Product.Product;
 import java.time.LocalDate;
-import java.util.Date;
 
-public class Cheese extends Product implements Expireable,Shipabble{
+public class Cheese extends Product implements Expireable, Shipabble {
     public LocalDate expirityDate;
     public Double weight;
     public Cheese(String name, Double price, int quantity, LocalDate expirityDate, Double weight) {

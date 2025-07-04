@@ -1,3 +1,9 @@
+import Components.Cart.Cart;
+import Components.Concrete.Cheese;
+import Components.Concrete.TV;
+import Components.Customer.Customer;
+import Components.Market.Market;
+
 import java.time.LocalDate;
 
 public class Main {

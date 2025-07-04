@@ -1,3 +1,4 @@
+package Components.Product;
 
 public class Product {
     public String name;
